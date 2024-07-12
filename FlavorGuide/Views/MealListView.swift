@@ -11,7 +11,7 @@ struct MealListView: View {
     @ObservedObject var mealListViewModel = MealListViewModel()
     
     var body: some View {
-        VStack {
+        Group {
             if mealListViewModel.isFetching {
                 ProgressView()
             } else if mealListViewModel.mealList.isEmpty {
