@@ -28,9 +28,9 @@ class MealDetailViewModel: ObservableObject {
         
         switch result {
         case .success(let responseModel):
+            error = nil
             let detailModel = MealDetailModel(mealResponse: responseModel.meals.first ?? [:])
             mealDetailModel = detailModel
-            error = nil
         case .failure(let error):
             self.error = error
         }

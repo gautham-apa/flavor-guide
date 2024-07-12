@@ -26,8 +26,8 @@ class MealListViewModel: ObservableObject {
         
         switch result {
         case .success(let responseModel):
-            mealList = responseModel.meals.sorted { $0.strMeal < $1.strMeal }
             error = nil
+            mealList = responseModel.meals.sorted { $0.strMeal < $1.strMeal }
         case .failure(let error):
             self.error = error
         }
