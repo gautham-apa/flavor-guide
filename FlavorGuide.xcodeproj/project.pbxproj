@@ -28,6 +28,8 @@
 		926956FD2C17A9AE00A94E42 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926956FC2C17A9AE00A94E42 /* String.swift */; };
 		926956FF2C17BD3F00A94E42 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926956FE2C17BD3F00A94E42 /* EmptyView.swift */; };
 		926957012C17E14F00A94E42 /* NetworkRequestible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926957002C17E14F00A94E42 /* NetworkRequestible.swift */; };
+		92B53B262C416CB100129F31 /* NetworkServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B53B252C416CB100129F31 /* NetworkServiceInterface.swift */; };
+		92B53B282C416EA000129F31 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B53B272C416EA000129F31 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		926956FC2C17A9AE00A94E42 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		926956FE2C17BD3F00A94E42 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		926957002C17E14F00A94E42 /* NetworkRequestible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestible.swift; sourceTree = "<group>"; };
+		92B53B252C416CB100129F31 /* NetworkServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceInterface.swift; sourceTree = "<group>"; };
+		92B53B272C416EA000129F31 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 				926956E42C162A3E00A94E42 /* Request+Recipes.swift */,
 				926956E62C16311400A94E42 /* HTTPClient.swift */,
 				926956E82C16421400A94E42 /* NetworkService+Recipes.swift */,
+				92B53B252C416CB100129F31 /* NetworkServiceInterface.swift */,
+				92B53B272C416EA000129F31 /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -339,9 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B53B262C416CB100129F31 /* NetworkServiceInterface.swift in Sources */,
 				926956F02C1688C100A94E42 /* MealListViewModel.swift in Sources */,
 				926956E92C16421400A94E42 /* NetworkService+Recipes.swift in Sources */,
 				926956E12C161BF500A94E42 /* HTTPMethod.swift in Sources */,
+				92B53B282C416EA000129F31 /* NetworkService.swift in Sources */,
 				926956E32C16265800A94E42 /* RequestError.swift in Sources */,
 				926956EC2C1673C400A94E42 /* MealGlimpseModel.swift in Sources */,
 				926956E72C16311400A94E42 /* HTTPClient.swift in Sources */,

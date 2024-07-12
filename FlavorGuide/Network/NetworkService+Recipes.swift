@@ -12,14 +12,14 @@ protocol RecipesNetworkServiceable {
     func fetchRecipeDetail(for mealId: String) async -> Result<MealDetailResponseModel, RequestError>
 }
 
-struct RecipesNetworkService: RecipesNetworkServiceable, HTTPClient {
+extension NetworkService: RecipesNetworkServiceable {
     func fetchRecipes(for category: MealCategory) async -> Result<MealGlimpseResponseModel, RequestError> {
-        let result = await sendRequest(request: RecipesRequest.fetchRecipes(category: category), responseModelType: MealGlimpseResponseModel.self)
+        let result = await networkServiceInterface.sendRequest(decodableType: MealGlimpseResponseModel.self, networkRequest: RecipesRequest.fetchRecipes(category: category))
         return result
     }
     
     func fetchRecipeDetail(for mealId: String) async -> Result<MealDetailResponseModel, RequestError> {
-        let result = await sendRequest(request: RecipesRequest.fetchRecipeDetail(mealId: mealId), responseModelType: MealDetailResponseModel.self)
+        let result = await networkServiceInterface.sendRequest(decodableType: MealDetailResponseModel.self, networkRequest: RecipesRequest.fetchRecipeDetail(mealId: mealId))
         return result
     }
 }
